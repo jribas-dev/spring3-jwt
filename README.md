@@ -1,4 +1,4 @@
-# spring-boot-security-3.0 login
+# spring-boot-security-6.0.2 jwt auth
 
 Creating a spring security login with jwt can be tedious and has a lot of boilerplate code. This is a basic pre-written 
 boilerplate code for using spring security 3 with jwt. This can easily be customized and used for different projects.
@@ -18,12 +18,12 @@ Test the endpoints
 
 ### Endpoints
 
-| ROUTE               | VERB | ACTION                                                                      | REQUIRES TOKEN |
-|---------------------|------|-----------------------------------------------------------------------------|----------------|
-| /api/v1/auth        | POST | Returns a token. 403 if username or password is invalid                     | False          |
-| /api/v1/hello       | GET  | Return "Hello from secure endpoint". Can be accessed by both admin and user | True           |
-| /api/v1/hello/admin | GET  | Return "For admin eyes only bro!". Can be accessed only  admin              | True           |
-| /api/v1/hello/user  | GET  | Return "For user eyes only bro!". Can be accessed only  user                | True           |
+| ROUTE               | VERB | ACTION                                                         | REQUIRES TOKEN |
+|---------------------|------|----------------------------------------------------------------|----------------|
+| /api/v1/auth        | POST | Returns a token. 403 if username or password is invalid        | False          |
+| /api/v1/hello       | GET  | Return "Hello for all people!". Can be accessed by anyone      | True           |
+| /api/v1/hello/admin | GET  | Return "For admin eyes only bro!". Can be accessed only  admin | True           |
+| /api/v1/hello/user  | GET  | Return "For user eyes only bro!". Can be accessed only  user   | True           |
 
 ## Sources
 1. [Spring Boot 3.0 Security | Authentication and Authorization | [New Changes] | javaTechie](https://www.youtube.com/watch?v=R76S0tfv36w)
